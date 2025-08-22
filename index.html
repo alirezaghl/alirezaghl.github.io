@@ -1,91 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alireza Ghalambor</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Alireza Ghalambor - Research in Reinforcement Learning, World Models, and Brain-Inspired AI">
+    <meta name="author" content="Alireza Ghalambor">
+
+    <title>Alireza Ghalambor</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Cabin:wght@700&display=swap" rel="stylesheet">
+
+    <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Lora', serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            background-color: #fff;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .profile-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .navbar-brand {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #333 !important;
         }
 
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 2px solid #f0f0f0;
-        }
-
-        .name {
-            font-size: 3rem;
-            font-weight: 300;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
-        }
-
-        .links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 20px;
-        }
-
-        .link-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #667eea;
-            text-decoration: none;
+        .nav-link {
+            color: #333 !important;
             font-weight: 500;
-            transition: all 0.3s ease;
-            padding: 8px 15px;
-            border-radius: 25px;
-            background: rgba(102, 126, 234, 0.1);
         }
 
-        .link-item:hover {
-            background: rgba(102, 126, 234, 0.2);
-            transform: translateY(-2px);
+        .nav-link:hover {
+            color: #667eea !important;
         }
 
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            color: #2c3e50;
-            margin-bottom: 20px;
+        .section-heading {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #667eea;
             padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
             display: inline-block;
         }
 
@@ -93,36 +59,29 @@
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
             padding: 25px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-        }
-
-        .interests-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
         }
 
         .interest-item {
             background: rgba(255, 255, 255, 0.2);
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 5px;
             font-weight: 500;
-            transition: transform 0.3s ease;
         }
 
-        .interest-item:hover {
-            transform: scale(1.05);
-        }
-
-        .experience-item {
+        .experience-item, .publication-item {
             background: #f8f9fa;
-            padding: 25px;
-            border-radius: 15px;
+            padding: 20px;
+            border-radius: 10px;
             margin-bottom: 20px;
-            border-left: 5px solid #667eea;
+            border-left: 4px solid #667eea;
+        }
+
+        .publication-item {
+            border-left-color: #28a745;
         }
 
         .experience-header {
@@ -134,9 +93,9 @@
         }
 
         .experience-title {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 600;
-            color: #2c3e50;
+            color: #333;
         }
 
         .experience-date {
@@ -148,37 +107,9 @@
             font-weight: 500;
         }
 
-        .education-item {
-            display: grid;
-            grid-template-columns: auto 1fr auto;
-            gap: 20px;
-            align-items: center;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-
-        .education-date {
-            background: #764ba2;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-weight: 500;
-            white-space: nowrap;
-        }
-
-        .publication-item {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            border-left: 4px solid #28a745;
-        }
-
         .publication-title {
             font-weight: 600;
-            color: #2c3e50;
+            color: #333;
             margin-bottom: 8px;
         }
 
@@ -203,14 +134,14 @@
         .skill-category {
             background: #f8f9fa;
             padding: 25px;
-            border-radius: 15px;
+            border-radius: 10px;
             border-top: 4px solid #667eea;
         }
 
-        .skill-category h4 {
-            color: #2c3e50;
+        .skill-category h5 {
+            color: #333;
             margin-bottom: 15px;
-            font-size: 1.2rem;
+            font-weight: 600;
         }
 
         .skill-level {
@@ -227,205 +158,377 @@
             color: #6c757d;
         }
 
+        .profile-img {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .inline-heading {
+            display: inline;
+        }
+
+        .text-muted a {
+            color: #667eea !important;
+            text-decoration: none;
+        }
+
+        .text-muted a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-
-            .profile-card {
-                padding: 20px;
-            }
-
-            .name {
-                font-size: 2.5rem;
-            }
-
-            .links {
-                flex-direction: column;
-                align-items: center;
-            }
-
             .experience-header {
                 flex-direction: column;
                 gap: 10px;
             }
 
-            .education-item {
+            .skills-grid {
                 grid-template-columns: 1fr;
-                text-align: center;
-                gap: 10px;
             }
         }
 
-        .fade-in {
-            animation: fadeInUp 0.8s ease-out;
+        .news-item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .list-container {
+            max-height: 300px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        #show-more-btn {
+            display: block;
+            text-align: center;
+            cursor: pointer;
+            color: #667eea;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        #show-more-btn:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
-<body>
+
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-        <div class="profile-card fade-in">
-            <div class="header">
-                <h1 class="name">Alireza Ghalambor</h1>
-                <div class="links">
-                    <a href="https://github.com/alirezaghl" class="link-item" target="_blank">
-                        <i class="fab fa-github"></i>
-                        <span>alirezaghl</span>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=p6SVYccAAAAJ&hl=en" class="link-item" target="_blank">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>Google Scholar</span>
-                    </a>
-                    <a href="mailto:ghalamboral@gmail.com" class="link-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>ghalamboral@gmail.com</span>
-                    </a>
-                </div>
+        <a class="navbar-brand" href="#page-top">Alireza Ghalambor</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#page-top">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#research">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#publications">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div style="height: 80px;">&nbsp;</div>
+
+<!-- About Section -->
+<section id="about" class="container">
+    <br>
+    <div class="row">
+        <div class="col-md-3 panel">
+            <img src="https://via.placeholder.com/300x400/667eea/ffffff?text=Your+Photo" width="100%" class="profile-img" alt="Alireza Ghalambor">
+        </div>
+        <div class="col-md-9">
+            <h3>Alireza Ghalambor</h3>
+            <p>
+                I am a research assistant at the CMC Lab working on computational neuroscience and brain-inspired AI. My research focuses on understanding how neural networks learn and represent cognitive tasks, with applications to reinforcement learning and world models.
+            </p>
+            <p>
+                I received my Doctorate of Medicine from Ahvaz University of Medical Sciences, where I graduated in the top 20% of my class. Currently, I am working under the supervision of Shervin Safavi, investigating how different factors affect the dynamics of recurrent neural networks trained on cognitive tasks.
+            </p>
+
+            <p class="inline-heading">
+                <a target="_blank" href="https://scholar.google.com/citations?user=p6SVYccAAAAJ&hl=en">Google Scholar</a> /
+                <a target="_blank" href="https://github.com/alirezaghl">Github</a> /
+                <a href="mailto:ghalamboral@gmail.com">Email</a> /
+                ghalamboral [at] gmail (dot) com
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Research Section -->
+<section id="research" class="align-content-md-start">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <h4 class="section-heading">Research</h4>
             </div>
-
-            <div class="research-interests">
-                <h2 style="margin-bottom: 20px; font-size: 1.8rem;">Research Interests</h2>
-                <div class="interests-grid">
-                    <div class="interest-item">Reinforcement Learning</div>
-                    <div class="interest-item">World Models</div>
-                    <div class="interest-item">Cognitive Maps</div>
-                    <div class="interest-item">Brain-Inspired AI</div>
-                </div>
+            <div class="col-lg-12 text-left">
+                <p>
+                    My research aims to understand how artificial neural networks can develop brain-like representations for complex cognitive tasks. I work on the following themes:
+                </p>
+                <ul>
+                    <li>Understanding the dynamics of recurrent neural networks in cognitive tasks using dynamical similarity analysis</li>
+                    <li>Developing brain-inspired architectures for reinforcement learning and world models</li>
+                    <li>Investigating cognitive maps and spatial-temporal representations in neural networks</li>
+                    <li>Bridging computational neuroscience and artificial intelligence</li>
+                </ul>
             </div>
-
-            <div class="section">
-                <h2 class="section-title">Research Experience</h2>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="experience-title">Research Assistant</div>
-                            <div style="color: #667eea; font-weight: 500; margin-top: 5px;">CMC Lab under supervision of Shervin Safavi</div>
-                        </div>
-                        <div class="experience-date">Present</div>
-                    </div>
-                    <p>Trained RNNs on a set of cognitive tasks from the NeuroGym library and used dynamical similarity analysis (DSA) to investigate different factors affecting dynamics.</p>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">Education</h2>
-                <div class="education-item">
-                    <div class="education-date">2017 - 2025</div>
-                    <div>
-                        <strong>Doctorate of Medicine</strong><br>
-                        <span style="color: #667eea; font-weight: 500;">Ahvaz University of Medical Sciences</span>
-                    </div>
-                    <div style="text-align: right; color: #28a745; font-weight: 500;">
-                        GPA: 3.6/4.0<br>
-                        Top 20%
-                    </div>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">Conference Abstracts</h2>
-                <div class="publication-item">
-                    <div class="publication-title">Identifying task-specific dynamics in recurrent neural networks using Dynamical Similarity Analysis</div>
-                    <div class="publication-venue">Bernstein 2024</div>
-                </div>
-                <div class="publication-item">
-                    <div class="publication-title">Heterogeneous Effect of Input and Task-optimization on the Dynamics of RNNs</div>
-                    <div class="publication-venue">CCN 2025</div>
-                    <div class="publication-note">(Not presented due to visa issues)</div>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4><i class="fas fa-code"></i> Programming</h4>
-                        <div class="skill-level">
-                            <div class="skill-level-title">High Intermediate</div>
-                            <div class="skill-list">C++, Python</div>
-                        </div>
-                        <div class="skill-level">
-                            <div class="skill-level-title">Intermediate</div>
-                            <div class="skill-list">C, Java, Javascript, LaTeX</div>
-                        </div>
-                        <div class="skill-level">
-                            <div class="skill-level-title">Beginner</div>
-                            <div class="skill-list">Lua, Bash</div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h4><i class="fas fa-chart-bar"></i> Data Science</h4>
-                        <div class="skill-list">Pandas, NumPy, PySpark, PyTorch, Keras, TensorFlow, Trax, Scikit-learn</div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h4><i class="fas fa-tools"></i> Tools & Frameworks</h4>
-                        <div class="skill-level">
-                            <div class="skill-level-title">High Intermediate</div>
-                            <div class="skill-list">Git, Django, Spring</div>
-                        </div>
-                        <div class="skill-level">
-                            <div class="skill-level-title">Intermediate</div>
-                            <div class="skill-list">Docker, Maven, VueJS</div>
-                        </div>
-                        <div class="skill-level">
-                            <div class="skill-level-title">Beginner</div>
-                            <div class="skill-list">K8s, ReactJS</div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h4><i class="fas fa-desktop"></i> Operating Systems</h4>
-                        <div class="skill-list">Linux (Debian-based and Arch-based), Windows</div>
-                    </div>
-                </div>
+        </div>
+        
+        <div class="research-interests">
+            <h5 style="margin-bottom: 20px; color: white;">Research Interests</h5>
+            <div>
+                <span class="interest-item">Reinforcement Learning</span>
+                <span class="interest-item">World Models</span>
+                <span class="interest-item">Cognitive Maps</span>
+                <span class="interest-item">Brain-Inspired AI</span>
+                <span class="interest-item">Computational Neuroscience</span>
+                <span class="interest-item">Dynamical Systems</span>
             </div>
         </div>
     </div>
+</section>
 
-    <script>
-        // Add smooth scrolling and intersection observer for animations
-        document.addEventListener('DOMContentLoaded', function() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
+<!-- News Section -->
+<section id="news" class="align-content-md-start">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 text-left">
+                <h4 class="section-heading">News</h4>
+            </div>
+        </div>
+        <div class="list-container">
+            <div class="row">
+                <div class="col-md-2 text-muted text-right">
+                    2025
+                </div>
+                <div class="col-md-10 text-muted">
+                    Abstract accepted at CCN 2025: "Heterogeneous Effect of Input and Task-optimization on the Dynamics of RNNs" (Not presented due to visa issues)
+                </div>
+                <div class="col-md-2 text-muted text-right">
+                    2024
+                </div>
+                <div class="col-md-10 text-muted">
+                    Presented abstract at Bernstein 2024: "Identifying task-specific dynamics in recurrent neural networks using Dynamical Similarity Analysis"
+                </div>
+                <div class="col-md-2 text-muted text-right">
+                    2024
+                </div>
+                <div class="col-md-10 text-muted">
+                    Started research position at CMC Lab under supervision of Shervin Safavi
+                </div>
+                <div class="col-md-2 text-muted text-right">
+                    2025
+                </div>
+                <div class="col-md-10 text-muted">
+                    Expected to complete Doctorate of Medicine degree from Ahvaz University of Medical Sciences
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10" id="show-more-btn">Show More</div>
+    </div>
+</section>
 
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.animation = 'fadeInUp 0.8s ease-out';
-                    }
-                });
-            }, observerOptions);
+<!-- Experience Section -->
+<section id="experience" class="align-content-md-start">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <h4 class="section-heading">Experience</h4>
+            </div>
+        </div>
+        
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="experience-title">Research Assistant</div>
+                    <div style="color: #667eea; font-weight: 500; margin-top: 5px;">CMC Lab under supervision of Shervin Safavi</div>
+                </div>
+                <div class="experience-date">Present</div>
+            </div>
+            <p>Trained RNNs on a set of cognitive tasks from the NeuroGym library and used dynamical similarity analysis (DSA) to investigate different factors affecting dynamics. Research focuses on understanding how task optimization and input characteristics influence neural network representations.</p>
+        </div>
 
-            document.querySelectorAll('.section').forEach(section => {
-                observer.observe(section);
-            });
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="experience-title">Medical Student</div>
+                    <div style="color: #667eea; font-weight: 500; margin-top: 5px;">Ahvaz University of Medical Sciences</div>
+                </div>
+                <div class="experience-date">2017 - 2025</div>
+            </div>
+            <p>Pursuing Doctorate of Medicine with focus on computational approaches to understanding brain function. Maintained top 20% academic standing while developing expertise in neuroscience and artificial intelligence.</p>
+        </div>
+    </div>
+</section>
 
-            // Add hover effects for interest items
-            document.querySelectorAll('.interest-item').forEach(item => {
-                item.addEventListener('mouseenter', function() {
-                    this.style.background = 'rgba(255, 255, 255, 0.3)';
-                });
-                
-                item.addEventListener('mouseleave', function() {
-                    this.style.background = 'rgba(255, 255, 255, 0.2)';
-                });
-            });
-        });
-    </script>
+<!-- Publications Section -->
+<section id="publications" class="align-content-md-start">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 text-left">
+                <h4 class="section-heading">Publications</h4>
+            </div>
+        </div>
+        
+        <div class="publication-item">
+            <div class="publication-title">Heterogeneous Effect of Input and Task-optimization on the Dynamics of RNNs</div>
+            <div class="publication-venue">CCN 2025</div>
+            <div class="publication-note">(Not presented due to visa issues)</div>
+        </div>
+        
+        <div class="publication-item">
+            <div class="publication-title">Identifying task-specific dynamics in recurrent neural networks using Dynamical Similarity Analysis</div>
+            <div class="publication-venue">Bernstein 2024</div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="align-content-md-start">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <h4 class="section-heading">Skills</h4>
+            </div>
+        </div>
+        
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h5><i class="fas fa-code"></i> Programming</h5>
+                <div class="skill-level">
+                    <div class="skill-level-title">High Intermediate</div>
+                    <div class="skill-list">C++, Python</div>
+                </div>
+                <div class="skill-level">
+                    <div class="skill-level-title">Intermediate</div>
+                    <div class="skill-list">C, Java, Javascript, LaTeX</div>
+                </div>
+                <div class="skill-level">
+                    <div class="skill-level-title">Beginner</div>
+                    <div class="skill-list">Lua, Bash</div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h5><i class="fas fa-chart-bar"></i> Data Science & ML</h5>
+                <div class="skill-list">Pandas, NumPy, PySpark, PyTorch, Keras, TensorFlow, Trax, Scikit-learn</div>
+            </div>
+
+            <div class="skill-category">
+                <h5><i class="fas fa-tools"></i> Tools & Frameworks</h5>
+                <div class="skill-level">
+                    <div class="skill-level-title">High Intermediate</div>
+                    <div class="skill-list">Git, Django, Spring</div>
+                </div>
+                <div class="skill-level">
+                    <div class="skill-level-title">Intermediate</div>
+                    <div class="skill-list">Docker, Maven, VueJS</div>
+                </div>
+                <div class="skill-level">
+                    <div class="skill-level-title">Beginner</div>
+                    <div class="skill-list">K8s, ReactJS</div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h5><i class="fas fa-desktop"></i> Operating Systems</h5>
+                <div class="skill-list">Linux (Debian-based and Arch-based), Windows</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="align-content-md-start">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <h4 class="section-heading">Contact</h4>
+            </div>
+            <div class="col-md-12">
+                <p>Feel free to reach out if you're interested in collaboration or have questions about my research.</p>
+                <p>
+                    <i class="fas fa-envelope"></i> ghalamboral@gmail.com<br>
+                    <i class="fab fa-github"></i> <a href="https://github.com/alirezaghl" target="_blank">github.com/alirezaghl</a><br>
+                    <i class="fas fa-graduation-cap"></i> <a href="https://scholar.google.com/citations?user=p6SVYccAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br><br>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// Smooth scrolling for navigation links
+$(document).ready(function() {
+    $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top - 80
+            }, 1000);
+        }
+    });
+
+    // News show more/less functionality
+    const showMoreButton = document.getElementById('show-more-btn');
+    const listContainer = document.querySelector('.list-container');
+
+    let showMore = false;
+
+    showMoreButton.addEventListener('click', () => {
+        showMore = !showMore;
+        listContainer.style.maxHeight = showMore ? 'none' : '300px';
+        showMoreButton.textContent = showMore ? 'Show Less' : 'Show More';
+    });
+
+    // Navbar background on scroll
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 50) {
+            $('.navbar').addClass('navbar-shrink');
+        } else {
+            $('.navbar').removeClass('navbar-shrink');
+        }
+    });
+});
+</script>
+
+<style>
+.navbar-shrink {
+    background-color: rgba(255, 255, 255, 0.98) !important;
+}
+</style>
+
 </body>
 </html>
