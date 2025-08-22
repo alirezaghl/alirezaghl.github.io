@@ -335,12 +335,12 @@
     </div>
 </section>
 
-<!-- Publications Section -->
-<section id="publications" class="align-content-md-start">
+<!-- Conference Abstracts Section -->
+<section id="abstracts" class="align-content-md-start">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 text-left">
-                <h4 class="section-heading">Publications</h4>
+                <h4 class="section-heading">Conference Abstracts</h4>
             </div>
         </div>
         
@@ -450,18 +450,8 @@ $(document).ready(function() {
         }
     });
 
-    // News show more/less functionality
-    const showMoreButton = document.getElementById('show-more-btn');
-    const listContainer = document.querySelector('.list-container');
-
-    let showMore = false;
-
-    showMoreButton.addEventListener('click', () => {
-        showMore = !showMore;
-        listContainer.style.maxHeight = showMore ? 'none' : '300px';
-        showMoreButton.textContent = showMore ? 'Show Less' : 'Show More';
-    });
-
+    // News show more/less functionality (removed since news section is deleted)
+    
     // Navbar background on scroll
     $(window).scroll(function() {
         if ($(window).scrollTop() > 50) {
