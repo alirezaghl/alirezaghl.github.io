@@ -46,6 +46,7 @@
 
         body.dark-mode .section-heading {
             color: #e0e0e0;
+            border-bottom-color: #667eea;
         }
 
         body.dark-mode .experience-item,
@@ -53,11 +54,38 @@
         body.dark-mode .skill-category {
             background: #2a2a2a;
             color: #e0e0e0;
+            border-left-color: #667eea;
+        }
+
+        body.dark-mode .publication-item {
+            border-left-color: #28a745;
         }
 
         body.dark-mode .experience-title,
-        body.dark-mode .publication-title {
+        body.dark-mode .publication-title,
+        body.dark-mode .skill-category h5 {
             color: #e0e0e0;
+        }
+
+        body.dark-mode .experience-date {
+            background: #667eea;
+            color: white;
+        }
+
+        body.dark-mode .publication-venue {
+            color: #28a745;
+        }
+
+        body.dark-mode .publication-note {
+            color: #a0a0a0;
+        }
+
+        body.dark-mode .skill-level-title {
+            color: #d0d0d0;
+        }
+
+        body.dark-mode .skill-list {
+            color: #b0b0b0;
         }
 
         body.dark-mode .profile-img {
@@ -72,10 +100,22 @@
             color: #667eea !important;
         }
 
+        /* Research interests tags in dark mode */
         body.dark-mode span[style*="background: #f8f9fa"] {
             background: #333 !important;
             border: 1px solid #555 !important;
+            color: #e0e0e0 !important;
+        }
+
+        /* Button styling for dark mode */
+        body.dark-mode #theme-toggle {
+            border-color: #555;
             color: #e0e0e0;
+        }
+
+        body.dark-mode #theme-toggle:hover {
+            background-color: #333;
+            border-color: #667eea;
         }
 
         .navbar {
