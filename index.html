@@ -7,7 +7,7 @@
     <meta name="description" content="Alireza Ghalambor - Research in Reinforcement Learning, World Models, and Brain-Inspired AI">
     <meta name="author" content="Alireza Ghalambor">
 
-    <title>Alireza Ghalambor</title>
+    <title>About - Alireza Ghalambor</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet">
@@ -22,6 +22,105 @@
             line-height: 1.6;
             color: #333;
             background-color: #fff;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .navbar {
+            background-color: rgba(30, 30, 30, 0.95) !important;
+        }
+
+        body.dark-mode .navbar-brand,
+        body.dark-mode .nav-link {
+            color: #e0e0e0 !important;
+        }
+
+        body.dark-mode .nav-link:hover {
+            color: #667eea !important;
+        }
+
+        body.dark-mode .section-heading {
+            color: #e0e0e0;
+            border-bottom-color: #667eea;
+        }
+
+        body.dark-mode .experience-item,
+        body.dark-mode .publication-item,
+        body.dark-mode .skill-category {
+            background: #2a2a2a;
+            color: #e0e0e0;
+            border-left-color: #667eea;
+        }
+
+        body.dark-mode .publication-item {
+            border-left-color: #28a745;
+        }
+
+        body.dark-mode .experience-title,
+        body.dark-mode .publication-title,
+        body.dark-mode .skill-category h5 {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .experience-date {
+            background: #667eea;
+            color: white;
+        }
+
+        body.dark-mode .publication-venue {
+            color: #28a745;
+        }
+
+        body.dark-mode .publication-note {
+            color: #a0a0a0;
+        }
+
+        body.dark-mode .skill-level-title {
+            color: #d0d0d0;
+        }
+
+        body.dark-mode .skill-list {
+            color: #b0b0b0;
+        }
+
+        body.dark-mode .profile-img {
+            border: 2px solid #444;
+        }
+
+        body.dark-mode .text-muted {
+            color: #b0b0b0 !important;
+        }
+
+        body.dark-mode .text-muted a {
+            color: #667eea !important;
+        }
+
+        /* Research interests tags in dark mode */
+        body.dark-mode span[style*="background: #f8f9fa"] {
+            background: #333 !important;
+            border: 1px solid #555 !important;
+            color: #e0e0e0 !important;
+        }
+
+        /* Research Interests heading in dark mode */
+        body.dark-mode h5 {
+            color: #e0e0e0 !important;
+        }
+
+        /* Button styling for dark mode */
+        body.dark-mode #theme-toggle {
+            border-color: #555;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode #theme-toggle:hover {
+            background-color: #333;
+            border-color: #667eea;
         }
 
         .navbar {
@@ -232,7 +331,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#page-top">Home</a>
+                    <a class="nav-link" href="#page-top">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#experience">Experience</a>
@@ -246,6 +345,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <button id="theme-toggle" class="btn btn-outline-secondary btn-sm" style="margin-left: 10px;">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
             </ul>
         </div>
     </div>
@@ -258,10 +362,10 @@
     <br>
     <div class="row">
         <div class="col-md-3 panel">
-            <img src="https://via.placeholder.com/300x400/667eea/ffffff?text=Your+Photo" width="100%" class="profile-img" alt="Alireza Ghalambor">
+            <img src="https://github.com/alirezaghl/alirezaghl.github.io/blob/main/files/me.jpg?raw=true" width="100%" class="profile-img" alt="Alireza Ghalambor">
         </div>
         <div class="col-md-9">
-            <h3>Alireza Ghalambor</h3>
+            <h3>About</h3>
             <p>
                 I am a research assistant at the CMC Lab working on computational neuroscience and brain-inspired AI. My research focuses on understanding how neural networks learn and represent cognitive tasks.
             </p>
@@ -272,8 +376,7 @@
             <p class="inline-heading">
                 <a target="_blank" href="https://scholar.google.com/citations?user=p6SVYccAAAAJ&hl=en">Google Scholar</a> /
                 <a target="_blank" href="https://github.com/alirezaghl">Github</a> /
-                <a href="mailto:ghalamboral@gmail.com">Email</a> /
-                ghalamboral [at] gmail (dot) com
+                <a href="mailto:ghalamboral@gmail.com">Email</a>
             </p>
 
             <div style="margin-top: 30px;">
@@ -282,9 +385,7 @@
                     <span style="background: #f8f9fa; padding: 8px 16px; border-radius: 20px; display: inline-block; margin: 5px; border: 1px solid #dee2e6;">Reinforcement Learning</span>
                     <span style="background: #f8f9fa; padding: 8px 16px; border-radius: 20px; display: inline-block; margin: 5px; border: 1px solid #dee2e6;">World Models</span>
                     <span style="background: #f8f9fa; padding: 8px 16px; border-radius: 20px; display: inline-block; margin: 5px; border: 1px solid #dee2e6;">Cognitive Maps</span>
-                    <span style="background: #f8f9fa; padding: 8px 16px; border-radius: 20px; display: inline-block; margin: 5px; border: 1px solid #dee2e6;">Brain-Inspired AI</span>
-                    <span style="background: #f8f9fa; padding: 8px 16px; border-radius: 20px; display: inline-block; margin: 5px; border: 1px solid #dee2e6;">Computational Neuroscience</span>
-                    <span style="background: #f8f9fa; padding: 8px 16px; border-radius: 20px; display: inline-block; margin: 5px; border: 1px solid #dee2e6;">Dynamical Systems</span>
+                    <span style="background: #f8f9fa; padding: 8px 16px; border-radius: 20px; display: inline-block; margin: 5px; border: 1px solid #dee2e6;">NeuroAI</span>
                 </div>
             </div>
         </div>
@@ -330,7 +431,7 @@
                 </div>
                 <div class="experience-date">2017 - 2025</div>
             </div>
-            <p>GPA: 3.6/4.0, Top 20%. Comprehensive medical education with focus on understanding human physiology and neural systems, providing foundation for computational neuroscience research.</p>
+            <p>GPA: 3.6/4.0, Top 20%. Graduated from one of the top medical universities in the country. Medicine is a 7-8 year program in Iran and in its last year we work as medical interns before graduating with an M.D. degree.</p>
         </div>
     </div>
 </section>
@@ -348,6 +449,11 @@
             <div class="publication-title">Heterogeneous Effect of Input and Task-optimization on the Dynamics of RNNs</div>
             <div class="publication-venue">CCN 2025</div>
             <div class="publication-note">(Not presented due to visa issues)</div>
+            <div style="margin-top: 8px;">
+                <a target="_blank" href="https://2025.ccneuro.org/abstract_pdf/Fakharian_2025_Heterogeneous_Effect_Input_Task-optimization_Dynamics_Recurrent.pdf" style="color: #667eea; text-decoration: none; font-weight: 500;">
+                    <i class="fas fa-file-pdf"></i> PDF
+                </a>
+            </div>
         </div>
         
         <div class="publication-item">
@@ -371,42 +477,22 @@
                 <h5><i class="fas fa-code"></i> Programming</h5>
                 <div class="skill-level">
                     <div class="skill-level-title">High Intermediate</div>
-                    <div class="skill-list">C++, Python</div>
-                </div>
-                <div class="skill-level">
-                    <div class="skill-level-title">Intermediate</div>
-                    <div class="skill-list">C, Java, Javascript, LaTeX</div>
+                    <div class="skill-list">Python</div>
                 </div>
                 <div class="skill-level">
                     <div class="skill-level-title">Beginner</div>
-                    <div class="skill-list">Lua, Bash</div>
+                    <div class="skill-list">Bash</div>
                 </div>
             </div>
 
             <div class="skill-category">
-                <h5><i class="fas fa-chart-bar"></i> Data Science & ML</h5>
-                <div class="skill-list">Pandas, NumPy, PySpark, PyTorch, Keras, TensorFlow, Trax, Scikit-learn</div>
-            </div>
-
-            <div class="skill-category">
-                <h5><i class="fas fa-tools"></i> Tools & Frameworks</h5>
-                <div class="skill-level">
-                    <div class="skill-level-title">High Intermediate</div>
-                    <div class="skill-list">Git, Django, Spring</div>
-                </div>
-                <div class="skill-level">
-                    <div class="skill-level-title">Intermediate</div>
-                    <div class="skill-list">Docker, Maven, VueJS</div>
-                </div>
-                <div class="skill-level">
-                    <div class="skill-level-title">Beginner</div>
-                    <div class="skill-list">K8s, ReactJS</div>
-                </div>
+                <h5><i class="fas fa-chart-bar"></i> Machine Learning Toolkits</h5>
+                <div class="skill-list">Pandas, NumPy, Gymnasium, TorchRL, HuggingFace, VLLM</div>
             </div>
 
             <div class="skill-category">
                 <h5><i class="fas fa-desktop"></i> Operating Systems</h5>
-                <div class="skill-list">Linux (Debian-based and Arch-based), Windows</div>
+                <div class="skill-list">Linux, Windows</div>
             </div>
         </div>
     </div>
@@ -420,12 +506,7 @@
                 <h4 class="section-heading">Contact</h4>
             </div>
             <div class="col-md-12">
-                <p>Feel free to reach out if you're interested in collaboration or have questions about my research.</p>
-                <p>
-                    <i class="fas fa-envelope"></i> ghalamboral@gmail.com<br>
-                    <i class="fab fa-github"></i> <a href="https://github.com/alirezaghl" target="_blank">github.com/alirezaghl</a><br>
-                    <i class="fas fa-graduation-cap"></i> <a href="https://scholar.google.com/citations?user=p6SVYccAAAAJ&hl=en" target="_blank">Google Scholar</a>
-                </p>
+                <p>Feel free to reach out if you're interested in collaboration or have questions about my research. You can find my contact information and links in the About section above.</p>
             </div>
         </div>
     </div>
@@ -438,7 +519,34 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
 
 <script>
-// Smooth scrolling for navigation links
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const icon = themeToggle.querySelector('i');
+
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+        body.classList.add('dark-mode');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    }
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        
+        if (body.classList.contains('dark-mode')) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
+    // Smooth scrolling for navigation links
 $(document).ready(function() {
     $('a[href^="#"]').on('click', function(event) {
         var target = $(this.getAttribute('href'));
