@@ -22,6 +22,60 @@
             line-height: 1.6;
             color: #333;
             background-color: #fff;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .navbar {
+            background-color: rgba(30, 30, 30, 0.95) !important;
+        }
+
+        body.dark-mode .navbar-brand,
+        body.dark-mode .nav-link {
+            color: #e0e0e0 !important;
+        }
+
+        body.dark-mode .nav-link:hover {
+            color: #667eea !important;
+        }
+
+        body.dark-mode .section-heading {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .experience-item,
+        body.dark-mode .publication-item,
+        body.dark-mode .skill-category {
+            background: #2a2a2a;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .experience-title,
+        body.dark-mode .publication-title {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .profile-img {
+            border: 2px solid #444;
+        }
+
+        body.dark-mode .text-muted {
+            color: #b0b0b0 !important;
+        }
+
+        body.dark-mode .text-muted a {
+            color: #667eea !important;
+        }
+
+        body.dark-mode span[style*="background: #f8f9fa"] {
+            background: #333 !important;
+            border: 1px solid #555 !important;
+            color: #e0e0e0;
         }
 
         .navbar {
@@ -246,6 +300,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <button id="theme-toggle" class="btn btn-outline-secondary btn-sm" style="margin-left: 10px;">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
             </ul>
         </div>
     </div>
@@ -415,7 +474,34 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
 
 <script>
-// Smooth scrolling for navigation links
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const icon = themeToggle.querySelector('i');
+
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+        body.classList.add('dark-mode');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    }
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        
+        if (body.classList.contains('dark-mode')) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
+    // Smooth scrolling for navigation links
 $(document).ready(function() {
     $('a[href^="#"]').on('click', function(event) {
         var target = $(this.getAttribute('href'));
